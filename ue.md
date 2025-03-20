@@ -210,7 +210,7 @@ PING montimage.com (217.70.184.55) from 192.168.225.25 usb0: 56(84) bytes of dat
 rtt min/avg/max/mdev = 25.482/33.312/44.891/8.178 ms
 ```
 
-- If UE has no Internet, then you need to add a [route](https://github.com/Montimage/docker-compose-srsran-open5gs-mmt/tree/main/docker/open5gs#usage) in the Core's host machine to the UEs' IP range
+- If UE has no Internet, then you need to add a [route](https://open5gs.org/open5gs/docs/guide/01-quickstart/#UEInternet) in the Core's host machine to the UEs' IP range
 ```bash
 sudo iptables -t nat -A POSTROUTING -o enp0s31f6 -j MASQUERADE
 sudo ip ro add 10.45.0.0/16 via 10.53.1.2
